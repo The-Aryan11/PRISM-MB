@@ -2,7 +2,7 @@
 
 ## Probabilistic Response-factor Informed Structural Mass Balance Framework
 
-**Innovation Challenge 2024 - Problem Statement 3**  
+**NEST 2.0 - Problem Statement 3**  
 Mass Balance Calculation Methods Evaluation in Analytical Forced Degradation Studies
 
 ---
