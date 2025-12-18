@@ -1,0 +1,112 @@
+{
+  "metadata": {
+    "analysis_timestamp": "2025-12-19 02:25:10",
+    "prism_version": "1.0.0"
+  },
+  "input_data": {
+    "api_initial": 98.0,
+    "api_stressed": 82.5,
+    "degradants_initial": 0.5,
+    "degradants_stressed": 4.9,
+    "api_loss": 15.5,
+    "degradation_level": "high",
+    "stress_condition": "Oxidative (3% H2O2, RT, 24h)"
+  },
+  "conventional_results": {
+    "SMB": {
+      "value": 87.4,
+      "acceptable": false
+    },
+    "AMB": {
+      "value": 88.73,
+      "acceptable": false
+    },
+    "AMBD": {
+      "value": 11.27,
+      "acceptable": false
+    },
+    "RMB": {
+      "value": 28.39,
+      "acceptable": false
+    },
+    "RMBD": {
+      "value": 71.61,
+      "acceptable": false
+    }
+  },
+  "prism_results": {
+    "RFCMB": {
+      "value": 90.39,
+      "acceptable": false
+    },
+    "WCMB": {
+      "value": 65.26,
+      "acceptable": false
+    },
+    "DAMB": {
+      "value": 92.94,
+      "acceptable": false
+    }
+  },
+  "uncertainty": {
+    "mean": 90.73,
+    "std": 2.47,
+    "ci_95": [
+      86.32,
+      95.9
+    ],
+    "probabilities": {
+      "p_above_95": 0.049,
+      "p_above_90": 0.605,
+      "p_above_85": 0.996
+    }
+  },
+  "decision": {
+    "outcome": "INVESTIGATE",
+    "confidence": 0.605
+  },
+  "recommendations": [
+    "\u25a1 Confirm response factors for major degradation peaks using reference standards",
+    "\u25a1 Run LC-MS analysis to identify non-chromophoric products",
+    "\u25a1 Check for volatile degradation products (headspace GC-MS)",
+    "\u25a1 Consider universal detection (CAD/ELSD) for non-UV active species",
+    "\u25a1 Review degradation pathway for expected products not detected",
+    "\u25a1 Verify peak integration parameters and baseline handling"
+  ],
+  "missing_mass_hypothesis": {
+    "total_missing_conventional": 11.27,
+    "explained_by_rf_correction": 1.66,
+    "remaining_unexplained": 9.61,
+    "breakdown": {
+      "volatile_products": {
+        "estimate": 2.4,
+        "range": [
+          1.0,
+          4.0
+        ],
+        "description": "Volatile degradation products (CO2, H2O, etc.)"
+      },
+      "non_chromophoric": {
+        "estimate": 2.52,
+        "range": [
+          1.5,
+          4.0
+        ],
+        "description": "Non-chromophoric or low-absorbing products"
+      },
+      "below_lod": {
+        "estimate": 1.41,
+        "range": [
+          0.5,
+          2.0
+        ],
+        "description": "Species below limit of detection"
+      },
+      "unexplained": {
+        "estimate": 3.28,
+        "description": "Requires further investigation"
+      }
+    },
+    "confidence": 0.66
+  }
+}

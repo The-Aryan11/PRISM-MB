@@ -1,0 +1,7 @@
+Method,Type,Mean Abs Error (%),Median Abs Error (%),Std Error (%),Max Error (%),90th Pctl Error (%),Improvement vs AMB (%)
+SMB,Conventional,9.89,9.22,5.01,23.46,16.72,-12.9
+AMB,Conventional,8.76,7.8,5.11,22.68,15.77,0.0
+RMB,Conventional,50.64,52.73,15.26,81.17,68.73,-478.1
+RFCMB,PRISM,5.44,4.79,3.92,20.36,10.5,37.9
+WCMB,PRISM,22.45,22.92,8.98,45.15,33.32,-156.3
+DAMB,PRISM,3.53,2.5,3.25,17.81,7.9,59.7
