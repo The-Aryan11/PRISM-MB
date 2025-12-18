@@ -6,7 +6,7 @@
 Mass Balance Calculation Methods Evaluation in Analytical Forced Degradation Studies
 
 ---
-
+```
 ## 📁 Project Structure
 PRISM-MB-Project/
 │
@@ -27,8 +27,7 @@ PRISM-MB-Project/
 │ └── assets/
 │
 └── README.md # This file
-
-text
+```
 
 
 ---
@@ -81,7 +80,7 @@ Statistical significance: **p < 0.001**
 ## 📋 How to Run Locally
 
 ### Web App
-```bash
+```
 cd webapp
 pip install -r requirements.txt
 streamlit run app.py
@@ -99,7 +98,7 @@ VIT Bhopal University
 📜 License
 MIT License
 
-🏆 Innovation Challenge 2024
+🏆 Innovation Challenge 2025
 This project addresses Problem Statement 3: Mass Balance Calculation Methods Evaluation in Analytical Forced Degradation Studies
 
 Tracks Covered:
