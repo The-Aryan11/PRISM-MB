@@ -32,13 +32,13 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
     menu_items={
-        'Get Help': 'https://github.com/aryanranjan/PRISM-MB',
-        'Report a bug': 'https://github.com/aryanranjan/PRISM-MB/issues',
-        'About': '# PRISM-MB Calculator\nDeveloped by Aryan Ranjan | VIT Bhopal University'
+        'Get Help': 'https://github.com/The-Aryan11/PRISM-MB',
+        'Report a bug': 'https://github.com/The-Aryan11/PRISM-MB/issues',
+        'About': '# PRISM-MB Calculator\nDeveloped by Aryan Ranjan | VIT Bhopal University | NEST 2.0'
     }
 )
 
-# Custom CSS
+# Custom CSS - FIXED TEXT VISIBILITY
 st.markdown("""
 <style>
     .main-header {
@@ -61,24 +61,60 @@ st.markdown("""
         padding: 1.5rem;
         border-radius: 0.75rem;
         border-left: 5px solid #10B981;
+        color: #065F46 !important;
+    }
+    .success-box h2 {
+        color: #065F46 !important;
+        margin-bottom: 0.5rem;
+    }
+    .success-box p {
+        color: #065F46 !important;
+        font-size: 1.1rem;
     }
     .warning-box {
         background-color: #FEF3C7;
         padding: 1.5rem;
         border-radius: 0.75rem;
         border-left: 5px solid #F59E0B;
+        color: #92400E !important;
+    }
+    .warning-box h2 {
+        color: #92400E !important;
+        margin-bottom: 0.5rem;
+    }
+    .warning-box p {
+        color: #92400E !important;
+        font-size: 1.1rem;
     }
     .error-box {
         background-color: #FEE2E2;
         padding: 1.5rem;
         border-radius: 0.75rem;
         border-left: 5px solid #EF4444;
+        color: #991B1B !important;
+    }
+    .error-box h2 {
+        color: #991B1B !important;
+        margin-bottom: 0.5rem;
+    }
+    .error-box p {
+        color: #991B1B !important;
+        font-size: 1.1rem;
     }
     .info-box {
         background-color: #DBEAFE;
         padding: 1.5rem;
         border-radius: 0.75rem;
         border-left: 5px solid #3B82F6;
+        color: #1E40AF !important;
+    }
+    .info-box h3 {
+        color: #1E40AF !important;
+        margin-bottom: 0.5rem;
+    }
+    .info-box p {
+        color: #1E40AF !important;
+        font-size: 1.05rem;
     }
     div[data-testid="stMetricValue"] {
         font-size: 1.8rem;
@@ -653,7 +689,7 @@ def main():
     st.markdown('<p class="main-header">🔬 PRISM-MB Calculator</p>', unsafe_allow_html=True)
     st.markdown('<p class="sub-header">Probabilistic Response-factor Informed Structural Mass Balance Framework</p>', 
                 unsafe_allow_html=True)
-    st.markdown('<p style="text-align:center; color:#9CA3AF; font-size:0.9rem;">Developed by Aryan Ranjan | VIT Bhopal University | Innovation Challenge 2024</p>', 
+    st.markdown('<p style="text-align:center; color:#6B7280; font-size:0.9rem;">Developed by Aryan Ranjan | VIT Bhopal University | NEST 2.0</p>', 
                 unsafe_allow_html=True)
     
     st.markdown("---")
@@ -825,12 +861,28 @@ def main():
             st.plotly_chart(fig_gauges, use_container_width=True)
         
         with tab3:
+            # Decision Box - FIXED VISIBILITY
             if decision == Decision.ACCEPT:
-                st.markdown(f'<div class="success-box"><h2>✅ Decision: {decision.value}</h2><p>{rationale}</p></div>', unsafe_allow_html=True)
+                st.markdown(f'''
+                <div class="success-box">
+                    <h2>✅ Decision: {decision.value}</h2>
+                    <p>{rationale}</p>
+                </div>
+                ''', unsafe_allow_html=True)
             elif decision == Decision.INVESTIGATE:
-                st.markdown(f'<div class="warning-box"><h2>⚠️ Decision: {decision.value}</h2><p>{rationale}</p></div>', unsafe_allow_html=True)
+                st.markdown(f'''
+                <div class="warning-box">
+                    <h2>⚠️ Decision: {decision.value}</h2>
+                    <p>{rationale}</p>
+                </div>
+                ''', unsafe_allow_html=True)
             else:
-                st.markdown(f'<div class="error-box"><h2>❌ Decision: {decision.value}</h2><p>{rationale}</p></div>', unsafe_allow_html=True)
+                st.markdown(f'''
+                <div class="error-box">
+                    <h2>❌ Decision: {decision.value}</h2>
+                    <p>{rationale}</p>
+                </div>
+                ''', unsafe_allow_html=True)
             
             st.markdown("---")
             st.subheader("📝 Recommendations")
@@ -877,7 +929,7 @@ def main():
 ================================================================================
 Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
 Software: PRISM-MB Calculator v1.0.0
-Author: Aryan Ranjan | VIT Bhopal University
+Author: Aryan Ranjan | VIT Bhopal University | NEST 2.0
 
 ================================================================================
 SAMPLE INFORMATION
@@ -927,7 +979,7 @@ Recommendations:
 {chr(10).join(['- ' + r for r in recommendations])}
 
 ================================================================================
-Generated by PRISM-MB Calculator | Innovation Challenge 2024
+Generated by PRISM-MB Calculator | NEST 2.0
 Author: Aryan Ranjan | VIT Bhopal University
 ================================================================================
             """
@@ -942,10 +994,11 @@ Author: Aryan Ranjan | VIT Bhopal University
             )
     
     else:
+        # Welcome screen - FIXED VISIBILITY
         st.markdown("""
         <div class="info-box">
             <h3>👋 Welcome to PRISM-MB Calculator!</h3>
-            <p>Enter your forced degradation data in the sidebar and click <b>Run PRISM Analysis</b> to get started.</p>
+            <p>Enter your forced degradation data in the sidebar and click <strong>Run PRISM Analysis</strong> to get started.</p>
         </div>
         """, unsafe_allow_html=True)
         
@@ -980,10 +1033,10 @@ Author: Aryan Ranjan | VIT Bhopal University
     # Footer
     st.markdown("---")
     st.markdown("""
-    <div style="text-align: center; color: #6B7280; padding: 1rem;">
+    <div style="text-align: center; color: #4B5563; padding: 1rem;">
         <p><strong>PRISM-MB Calculator</strong> | Version 1.0.0</p>
         <p>Developed by <strong>Aryan Ranjan</strong> | B.Tech CSE | VIT Bhopal University</p>
-        <p>Innovation Challenge 2024</p>
+        <p><strong>NEST 2.0</strong></p>
     </div>
     """, unsafe_allow_html=True)
 
