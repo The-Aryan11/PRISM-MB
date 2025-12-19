@@ -89,16 +89,17 @@ Bash
 
 cd research
 jupyter notebook
+
+
 👨‍💻 Author
 Aryan Ranjan
 B.Tech CSE (E-Commerce Technologies)
 VIT Bhopal University
-2nd Year
 
 📜 License
 MIT License
 
-🏆 Innovation Challenge 2025
+🏆 NEST 2.0
 This project addresses Problem Statement 3: Mass Balance Calculation Methods Evaluation in Analytical Forced Degradation Studies
 
 Tracks Covered:
